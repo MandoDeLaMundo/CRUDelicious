@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @using CRUDelicious.Models
+    @model Dish
+    
+    <title>Edit @Model.Name</title>
+    
+    
+</head>
+<body>
+    <h2>Edit @Model.Name</h2>
+    <a href="/">⬅️ Home</a>
+    <form action="/updateDish" method="post">
+        <p>Name of Dish</p>
+        <input type="text" value="@Model.Name" name="Name">
+        
+        <p>Chef Name</p>
+        <input type="text" value="@Model.Chef" name="Chef">
+
+        <p>Tastiness</p>
+        <select name="Tastiness" value="@Model.Tastiness">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select>
+
+        <p>Calories</p>
+        <input type="number" value="@Model.Calories" name="Calories">
+
+        <p>Description</p>
+        <textarea name="Description" cols="30" rows="10">@Model.Description</textarea>
+
+        <input type="hidden" name="DishID" value="@Model.DishID">
+        <br>
+        <button type="submit">Edit Dish!</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\armti\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\armti\\.nuget\\packages"
+    ]
+  }
+}
